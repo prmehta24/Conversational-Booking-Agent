@@ -16,8 +16,12 @@
     * Updated App.tsx with a component to display a list of messages and a form to enter a message. Debugging why the message list is not being entered when the form message is submitted.
 * 2 hours complete:
     * Fixed bug in App.tsx - Now message list is being updated when form message is submitted. Adding css to make chat ui look better.
+* 2.5 hours complete:
+    * Set up python virtual environment. Installed FastAPI. 
+    * Created a file for the Python backend code.
 
 
 ## References
 * https://medium.com/free-code-camp/how-to-build-a-react-js-chat-app-in-10-minutes-c9233794642b
+* https://fastapi.tiangolo.com/
 
