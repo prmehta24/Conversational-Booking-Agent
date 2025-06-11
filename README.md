@@ -12,6 +12,8 @@
         * Use Playwright for browser automation.  
 * 1 hour complete:
     * Updated App.tsx to start building the Chat UI. Updated README with link to the guide I am following to build a simple Chat UI.
+* 1.5 hours complete:
+    * Updated App.tsx with a component to display a list of messages and a form to enter a message. Debugging why the message list is not being entered when the form message is submitted.
 
 ## References
 * https://medium.com/free-code-camp/how-to-build-a-react-js-chat-app-in-10-minutes-c9233794642b
