@@ -9,15 +9,15 @@ function App() {
       messageId: 1,
       senderId:'OpenAI',
       text: "Hi, I'm ChatGPT"
-    },
+    }
   ]);
 
   function addMessages(message:any) {
     setMessageCount(messageCount + 1)
-    setMessages([...messages, {messageId: messageCount, senderId: 'User', text:message}])
+    setMessages([...messages, {messageId: (messageCount+1), senderId: 'User', text:message}])
     console.log(messages)
   }
-
+  console.log(messages)
   return (
     <div className="App">
       <header className="App-header">
@@ -34,12 +34,12 @@ function MessageList({messages} : {messages:any}) {
     <ul className="message-list">                 
         {messages.map((message: any) => {
           return (
-           <li key={message.messageId}>
+           <li className="messageListItem" key={message.messageId}>
              <div>
-               {message.senderId}
+               Sender: {message.senderId}
              </div>
              <div>
-               {message.text}
+               Message: {message.text}
              </div>
            </li>
          )
@@ -58,24 +58,21 @@ function SendMessageForm( {addMessages} : {addMessages:any}) {
 
   const [message, setMessage] = useState("")
 
-  function handleSubmit() {
-    addMessages(message)
+  function handleSubmit(formData:any) {
+    console.log(formData.get("textInput"))
+    addMessages(formData.get("textInput"))
     setMessage("")
-  }
-
-  function handleChange(e:any) {
-    setMessage(e.target.value)
   }
 
   return(
     <form
-        onSubmit={handleSubmit}
+        action={handleSubmit}
         className="send-message-form">
         <input
-          onChange={handleChange}
-          value={message}
-          placeholder="Type your message and hit ENTER"
-          type="text" />
+          name="textInput"
+          placeholder="Type your message"
+          />
+        <button type="submit">Send</button>
       </form>
   );
 }
