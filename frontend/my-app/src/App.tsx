@@ -35,10 +35,10 @@ function MessageList({messages} : {messages:any}) {
         {messages.map((message: any) => {
           return (
            <li className="messageListItem" key={message.messageId}>
-             <div>
+             <div className="messageSenderInfoDiv">
                Sender: {message.senderId}
              </div>
-             <div>
+             <div className="messageInfoDiv">
                Message: {message.text}
              </div>
            </li>

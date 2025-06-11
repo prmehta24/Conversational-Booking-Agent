@@ -16,4 +16,17 @@
 .messageListItem {
   list-style: none;
   background-color: black;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.messageSenderInfoDiv {
+  text-align: left;
+  font-size: small;
+}
+
+.messageInfoDiv {
+
+  text-align: left;
 }
