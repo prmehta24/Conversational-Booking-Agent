@@ -22,7 +22,18 @@
 * 3 hours complete:
     * Updated frontend code to use index in message list as key for li elements.
     * Added API endpoints in python backend to return messagelist and add new messages to messagelist stored in backend.
+* 3.5 hours complete:
+    * Got backend server to run with API endpoints and tested them out with Swagger.
+    * Debugged encoding error with starting backend server and compilation errors with main.py.
+    * Added some instructions to run both servers to the README.
 
+# Instructions to Run
+* To active virtual env with git bash: 'source .venv/Scripts/activate'
+* To run frontend:
+    * "cd my-app"
+    * "npm start"
+* To run backend:
+    * "fastapi run main.py"
 
 ## References
 * https://medium.com/free-code-camp/how-to-build-a-react-js-chat-app-in-10-minutes-c9233794642b

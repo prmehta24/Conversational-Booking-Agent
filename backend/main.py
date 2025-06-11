@@ -1,19 +1,18 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import sys
 
+sys.stdin.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8')
 
 app = FastAPI()
 
 class Message(BaseModel):
     senderName: str
     text: str
-
-    def __init__(self, senderName: str, text: str):
-        self.senderName = senderName
-        self.text = text
     
 
-messageList = [Message("OpenAI", "Hello, this is the first message.")]
+messageList = [Message(senderName="OpenAI", text="Hello, this is the first message.")]
 
 @app.get("/")
 def read_root():
