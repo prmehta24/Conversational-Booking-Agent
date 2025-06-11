@@ -19,6 +19,9 @@
 * 2.5 hours complete:
     * Set up python virtual environment. Installed FastAPI. 
     * Created a file for the Python backend code.
+* 3 hours complete:
+    * Updated frontend code to use index in message list as key for li elements.
+    * Added API endpoints in python backend to return messagelist and add new messages to messagelist stored in backend.
 
 
 ## References

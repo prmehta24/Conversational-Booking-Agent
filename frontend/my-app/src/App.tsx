@@ -3,18 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [messageCount, setMessageCount] = useState(1);
   const [messages, setMessages] = useState([
     {
-      messageId: 1,
       senderId:'OpenAI',
       text: "Hi, I'm ChatGPT"
     }
   ]);
 
   function addMessages(message:any) {
-    setMessageCount(messageCount + 1)
-    setMessages([...messages, {messageId: (messageCount+1), senderId: 'User', text:message}])
+    setMessages([...messages, {senderId: 'User', text:message}])
     console.log(messages)
   }
   console.log(messages)
@@ -32,9 +29,9 @@ function App() {
 function MessageList({messages} : {messages:any}) {
   return(
     <ul className="message-list">                 
-        {messages.map((message: any) => {
+        {messages.map((message: any, index: any) => {
           return (
-           <li className="messageListItem" key={message.messageId}>
+           <li className="messageListItem" key={index}>
              <div className="messageSenderInfoDiv">
                Sender: {message.senderId}
              </div>
