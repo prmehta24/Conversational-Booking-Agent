@@ -36,6 +36,8 @@
 * 5 hours complete:
     * Found out that OpenAI API was paid. Surveyed free OpenAI API alternatives and decided on the Gemini API.
     * Got the API key, made a .env file, and tested out the API.
+* 5.5 hours complete:
+    * Updated model.py to use Gemini API Chat SDK. This retains chat history for the AI assistant to use as context.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
@@ -59,4 +61,5 @@
 * https://fastapi.tiangolo.com/tutorial/cors/#use-corsmiddleware
 * https://stackoverflow.com/questions/72253011/is-it-possible-to-initialize-the-state-of-a-component-with-api-data-before-the-i
 * https://ai.google.dev/gemini-api/docs/quickstart
+* https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1
 
