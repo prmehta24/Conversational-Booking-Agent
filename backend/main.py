@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from model import get_ai_response
 import sys
 
 origins = [
@@ -25,7 +26,15 @@ class Message(BaseModel):
     text: str
     
 
-messageList = [Message(senderName="OpenAI", text="Hello, this is the first message.")]
+messageList = []
+# initialise the messageList.
+ai_response = get_ai_response("Hi!")
+if ai_response:
+    ai_message = Message(senderName="AI", text=ai_response.text)
+    messageList.append(ai_message)
+else:
+    ai_message = Message(senderName="AI", text="Sorry, I am having trouble connecting to the AI service.")
+    messageList.append(ai_message)
 
 @app.get("/")
 def read_root():
@@ -38,5 +47,12 @@ def read_message_list():
 @app.post("/addMessage")
 def add_message(message: Message):
     messageList.append(message)
+    ai_response = get_ai_response(message.text)
+    if ai_response:
+        ai_message = Message(senderName="AI", text=ai_response.text)
+        messageList.append(ai_message)
+    else:
+        ai_message = Message(senderName="AI", text="Sorry, I couldn't process your request.")
+        messageList.append(ai_message)
     return {"message": "Message added successfully", "messageList": messageList}
 

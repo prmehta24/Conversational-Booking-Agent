@@ -38,6 +38,10 @@
     * Got the API key, made a .env file, and tested out the API.
 * 5.5 hours complete:
     * Updated model.py to use Gemini API Chat SDK. This retains chat history for the AI assistant to use as context.
+* 6 hours complete:
+    * Added a function to send a message to the AI and get a response. Integrated this function into the addMessage function.
+    * Used the above mentioned function to initialise the messageList with an AI message.
+    * Added function declaration for calendly booking function. Gave info about booking function to AI.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
@@ -62,4 +66,4 @@
 * https://stackoverflow.com/questions/72253011/is-it-possible-to-initialize-the-state-of-a-component-with-api-data-before-the-i
 * https://ai.google.dev/gemini-api/docs/quickstart
 * https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1
-
+* https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files
