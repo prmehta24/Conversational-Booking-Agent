@@ -29,6 +29,10 @@
 * 4 hours complete:
     * Rewired frontend to fetch messagesList to display from backend.
     * Updating backend to fix 'blocked by CORS policy' issue.
+* 4.5 hours complete:
+    * Fixed CORS issue with backend.
+    * Cleaned up logs in frontend.
+    * Updated addMessage function in frontend to send a POST request to the backend addMessage endpoint.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
@@ -37,8 +41,16 @@
     * "npm start"
 * To run backend:
     * "fastapi run main.py"
+* Set 'PYTHONIOENCODING=utf-8' environment variable in case of UnicodeEncodeError when starting backend server. Refer link 3.
+
+## Tools used
+* Github CoPilot
+* Visual Studio Code
 
 ## References
 * https://medium.com/free-code-camp/how-to-build-a-react-js-chat-app-in-10-minutes-c9233794642b
 * https://fastapi.tiangolo.com/
+* https://stackoverflow.com/questions/79199890/fastapi-dev-fails-with-unicodeencodeerror
+* https://fastapi.tiangolo.com/tutorial/cors/#use-corsmiddleware
+* https://stackoverflow.com/questions/72253011/is-it-possible-to-initialize-the-state-of-a-component-with-api-data-before-the-i
 

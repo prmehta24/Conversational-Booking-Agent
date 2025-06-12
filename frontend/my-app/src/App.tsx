@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [messages, setMessages] = useState([
-    {
-      senderId:'OpenAI',
-      text: "Hi, I'm ChatGPT"
-    }
-  ]);
+  const [messages, setMessages] = useState([]);
 
   async function fetchMessages() {
     try {
@@ -17,8 +12,7 @@ function App() {
       }
       const data = await response.json();
       setMessages(data);
-      console.log('Fetched messages: ', data);
-      console.log('Messages List: ',messages);
+      console.log('Updated Messages List from backend: ',messages);
     } catch (error) {
       console.error('Error fetching messages:', error);
     }
@@ -28,12 +22,27 @@ function App() {
     fetchMessages();
   }, []);
 
-  function addMessages(message:any) {
-    setMessages([...messages, {senderId: 'User', text:message}])
-    console.log(messages)
+  async function addMessages(message:any) {
+    try{
+      const response = await fetch("http://localhost:8000/addMessage", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "accept": "application/json"
+        },
+        body: JSON.stringify({senderName: 'User', text:message}),
+      });
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+      const data = await response.json();
+      console.log('Response Data from backend after addMessage POST Request: ', data);
+      setMessages(data.messageList);
+  } catch (error) {
+    console.error('Error adding message:', error);  
+  }
   }
   
-  console.log(messages)
   return (
     <div className="App">
       <header className="App-header">
@@ -52,7 +61,7 @@ function MessageList({messages} : {messages:any}) {
           return (
            <li className="messageListItem" key={index}>
              <div className="messageSenderInfoDiv">
-               Sender: {message.senderId}
+               Sender: {message.senderName}
              </div>
              <div className="messageInfoDiv">
                Message: {message.text}
@@ -75,7 +84,7 @@ function SendMessageForm( {addMessages} : {addMessages:any}) {
   const [message, setMessage] = useState("")
 
   function handleSubmit(formData:any) {
-    console.log(formData.get("textInput"))
+    console.log("Data submitted by form: ",formData.get("textInput"))
     addMessages(formData.get("textInput"))
     setMessage("")
   }
