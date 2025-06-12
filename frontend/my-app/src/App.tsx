@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -10,10 +9,30 @@ function App() {
     }
   ]);
 
+  async function fetchMessages() {
+    try {
+      const response = await fetch('http://localhost:8000/messageList');
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+      const data = await response.json();
+      setMessages(data);
+      console.log('Fetched messages: ', data);
+      console.log('Messages List: ',messages);
+    } catch (error) {
+      console.error('Error fetching messages:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchMessages();
+  }, []);
+
   function addMessages(message:any) {
     setMessages([...messages, {senderId: 'User', text:message}])
     console.log(messages)
   }
+  
   console.log(messages)
   return (
     <div className="App">

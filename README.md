@@ -26,6 +26,9 @@
     * Got backend server to run with API endpoints and tested them out with Swagger.
     * Debugged encoding error with starting backend server and compilation errors with main.py.
     * Added some instructions to run both servers to the README.
+* 4 hours complete:
+    * Rewired frontend to fetch messagesList to display from backend.
+    * Updating backend to fix 'blocked by CORS policy' issue.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
