@@ -10,7 +10,7 @@ schedule_meeting_function = {
     "parameters": {
         "type": "object",
         "properties": {
-        "name": {
+            "name": {
                 "type": "string",
                 "description": "Name of the person scheduling the meeting.",
             },
@@ -27,7 +27,7 @@ schedule_meeting_function = {
                 "description": "Time of the meeting (e.g., '15:00')",
             },
         },
-        "required": ["attendees", "date", "time", "topic"],
+        "required": ["name", "email", "date", "time"],
     },
 }
 
@@ -38,6 +38,7 @@ tools = types.Tool(function_declarations=[schedule_meeting_function])
 
 chat = client.chats.create(model="gemini-2.0-flash", 
     config=types.GenerateContentConfig(
+        tools=[tools],
         system_instruction="The AI Assistant should engage the Human user in a dialogue" \
         " to collect all necessary booking details (name, email, date, time" \
         "). The assistant should ask for any " \
@@ -45,5 +46,14 @@ chat = client.chats.create(model="gemini-2.0-flash",
 
 def get_ai_response(user_message):
     response = chat.send_message(user_message)
-    print(f"AI Response: {response.text}")
-    return response
+    print(f"AI Response: {response}")
+    if response.candidates[0].content.parts[0].function_call:
+        function_call = response.candidates[0].content.parts[0].function_call
+        print(f"Function to call: {function_call.name}")
+        print(f"Arguments: {function_call.args}")
+        #  In a real app, you would call your function here:
+        #  result = schedule_meeting(**function_call.args)
+        return "Called the schedule_meeting function with arguments: " + str(function_call.args)
+    else:
+        print(f"AI Response Message: {response.text}")
+        return response.text

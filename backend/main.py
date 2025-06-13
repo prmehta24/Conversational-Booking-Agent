@@ -30,7 +30,7 @@ messageList = []
 # initialise the messageList.
 ai_response = get_ai_response("Hi!")
 if ai_response:
-    ai_message = Message(senderName="AI", text=ai_response.text)
+    ai_message = Message(senderName="AI", text=ai_response)
     messageList.append(ai_message)
 else:
     ai_message = Message(senderName="AI", text="Sorry, I am having trouble connecting to the AI service.")
@@ -49,7 +49,7 @@ def add_message(message: Message):
     messageList.append(message)
     ai_response = get_ai_response(message.text)
     if ai_response:
-        ai_message = Message(senderName="AI", text=ai_response.text)
+        ai_message = Message(senderName="AI", text=ai_response)
         messageList.append(ai_message)
     else:
         ai_message = Message(senderName="AI", text="Sorry, I couldn't process your request.")

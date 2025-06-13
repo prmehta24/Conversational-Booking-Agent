@@ -42,6 +42,9 @@
     * Added a function to send a message to the AI and get a response. Integrated this function into the addMessage function.
     * Used the above mentioned function to initialise the messageList with an AI message.
     * Added function declaration for calendly booking function. Gave info about booking function to AI.
+* 6.5 hours complete:
+    * Built out calendly booking function.
+    * Updated get ai response function to identify when the ai response is requesting a function call.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
@@ -67,3 +70,4 @@
 * https://ai.google.dev/gemini-api/docs/quickstart
 * https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1
 * https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files
+* https://ai.google.dev/gemini-api/docs/function-calling?example=meeting
