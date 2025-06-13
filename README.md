@@ -47,6 +47,8 @@
     * Updated get ai response function to identify when the ai response is requesting a function call.
 * 7 hours complete:
     * Debugging calendly booking function.
+* 7.5 hours complete:
+    * Updated calendly booking function to locate Next button element to click properly.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
