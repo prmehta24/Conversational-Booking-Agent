@@ -45,6 +45,8 @@
 * 6.5 hours complete:
     * Built out calendly booking function.
     * Updated get ai response function to identify when the ai response is requesting a function call.
+* 7 hours complete:
+    * Debugging calendly booking function.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
