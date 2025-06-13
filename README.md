@@ -49,6 +49,10 @@
     * Debugging calendly booking function.
 * 7.5 hours complete:
     * Updated calendly booking function to locate Next button element to click properly.
+* 8 hours complete:
+    * Updated book meeting function declaration to include expected time and date formats
+    * Updated model get_ai_response function to call book_meeting function
+    * Added error handling to book_meeting function. Got book_meeting to work consistently and return a response. Debugged playwright code to make it work with fastapi server.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'

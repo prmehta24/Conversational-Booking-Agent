@@ -2,6 +2,7 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 import os
+from booking import book_meeting
 
 # Define the function declaration for the model
 schedule_meeting_function = {
@@ -20,11 +21,11 @@ schedule_meeting_function = {
             },
             "date": {
                 "type": "string",
-                "description": "Date of the meeting (e.g., '2024-07-29')",
+                "description": "Date of the meeting (e.g., '2025-07-10')",
             },
             "time": {
                 "type": "string",
-                "description": "Time of the meeting (e.g., '15:00')",
+                "description": "Time of the meeting (e.g., '10:30am', '3:00pm')",
             },
         },
         "required": ["name", "email", "date", "time"],
@@ -52,8 +53,10 @@ def get_ai_response(user_message):
         print(f"Function to call: {function_call.name}")
         print(f"Arguments: {function_call.args}")
         #  In a real app, you would call your function here:
-        #  result = schedule_meeting(**function_call.args)
-        return "Called the schedule_meeting function with arguments: " + str(function_call.args)
+        #print(function_call.args['email'])
+        result = book_meeting(**function_call.args)
+        return result
+        #return "Called the schedule_meeting function with arguments: " + str(function_call.args)
     else:
         print(f"AI Response Message: {response.text}")
         return response.text
