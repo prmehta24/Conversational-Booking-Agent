@@ -53,6 +53,9 @@
     * Updated book meeting function declaration to include expected time and date formats
     * Updated model get_ai_response function to call book_meeting function
     * Added error handling to book_meeting function. Got book_meeting to work consistently and return a response. Debugged playwright code to make it work with fastapi server.
+* 8.5 hours complete:
+    * Updated booking logic to mention this is a test booking in the additional info section when booking.
+    * Added better error handling and more useful error responses to the booking logic.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
@@ -79,3 +82,6 @@
 * https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1
 * https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files
 * https://ai.google.dev/gemini-api/docs/function-calling?example=meeting
+* https://playwright.dev/python/docs/api/class-selectors#selectors-set-test-id-attribute
+* https://stackoverflow.com/questions/75151754/how-can-i-select-an-element-by-id
+* https://stackoverflow.com/questions/79109458/playwright-python-how-can-i-catch-exception-and-just-gracefully-quit
