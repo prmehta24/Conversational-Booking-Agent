@@ -56,6 +56,10 @@
 * 8.5 hours complete:
     * Updated booking logic to mention this is a test booking in the additional info section when booking.
     * Added better error handling and more useful error responses to the booking logic.
+* 9 hours complete:
+    * Modified code to work for any calendly booking url.
+    * Cleaned up unnecessary imports, added comments, and debugged error related to selecting wrong time during booking using playwright. I was using an ambiguous element selector.
+    * Reread the assignment document to figure out what is left to do.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
@@ -65,8 +69,9 @@
 * To run backend:
     * "fastapi run main.py"
 * Set 'PYTHONIOENCODING=utf-8' environment variable in case of UnicodeEncodeError when starting backend server. Refer link 3.
-* Create a .env file in the backend folder and save one line:
+* Create a .env file in the backend folder and save two lines:
     * GEMINI_API_KEY=api_key_value_here
+    * CALENDLY_BOOKING_URL=https://calendly.com/your_booking_url
 
 ## Tools used
 * Github CoPilot
