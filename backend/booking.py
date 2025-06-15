@@ -12,7 +12,7 @@ def book_meeting(name: str, email: str, date: str, time: str):
         browser = p.chromium.launch(headless=True) # Set headless=False to debug
         page = browser.new_page()
 
-        # Navigate to the booking page
+        # Navigate to the booking page for a particular date.
         response = "The booking URL is unavailable. Please try again later." #TODO: Test how to get this response.
         booking_url = CALENDLY_BOOKING_URL
         # update url with date.

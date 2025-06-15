@@ -67,21 +67,26 @@
     * Created list of tasks left to do and began writing the project report.
 * 10 hours complete:
     * Continued writing the project report - Explained architecture, why I chose the tech stack, separation of logic in the codebase, future work, etc.
+* 10.5 hours complete:
+    * Added comments to code.
+    * Improved instructions to run project in README.
+    * Updated Project Report - Added my approach on how I would handle bonus objectives, added more future planned work(UI updates, potential failure flows to handle, changes to make backend code more clear/faster/reliable), etc.
 
 # Instructions to Run
-* To active virtual env with git bash: 'source .venv/Scripts/activate'
+
 * To run frontend:
     * "cd my-app"
     * "npm start"
-* To run backend:
-    * "fastapi run main.py"
-* Set 'PYTHONIOENCODING=utf-8' environment variable in case of UnicodeEncodeError when starting backend server. Refer link 3.
 * Create a .env file in the backend folder and save two lines:
     * GEMINI_API_KEY=api_key_value_here
     * CALENDLY_BOOKING_URL=https://calendly.com/your_booking_url
+* To run backend:
+    * To active virtual env with git bash: 'source .venv/Scripts/activate'  
+    * Set 'PYTHONIOENCODING=utf-8' environment variable in case of UnicodeEncodeError when starting backend server. Refer link 3.
+    * "fastapi run main.py"
 
 ## Tools used
-* Github CoPilot
+* Github Copilot
 * Visual Studio Code
 
 ## References
