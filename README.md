@@ -71,6 +71,8 @@
     * Added comments to code.
     * Improved instructions to run project in README.
     * Updated Project Report - Added my approach on how I would handle bonus objectives, added more future planned work(UI updates, potential failure flows to handle, changes to make backend code more clear/faster/reliable), etc.
+* 11 hours complete:
+    * Updated Project Report - Added my approach on how I would handle bonus objectives, adding what I accomplished and learned from the assessment, future work, etc.
 
 # Instructions to Run
 
