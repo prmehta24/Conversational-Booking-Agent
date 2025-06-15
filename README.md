@@ -73,6 +73,8 @@
     * Updated Project Report - Added my approach on how I would handle bonus objectives, added more future planned work(UI updates, potential failure flows to handle, changes to make backend code more clear/faster/reliable), etc.
 * 11 hours complete:
     * Updated Project Report - Added my approach on how I would handle bonus objectives, adding what I accomplished and learned from the assessment, future work, etc.
+* 11.5 hours complete:
+    * Updated Project Report - Added what I accomplished and learned from the assessment, future work, justification for use of Playwright, etc.
 
 # Instructions to Run
 
