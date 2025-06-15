@@ -65,6 +65,8 @@
     * Reread the assignment document to figure out what is left to do.
 * 9.5 hours complete:
     * Created list of tasks left to do and began writing the project report.
+* 10 hours complete:
+    * Continued writing the project report - Explained architecture, why I chose the tech stack, separation of logic in the codebase, future work, etc.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'

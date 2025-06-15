@@ -127,3 +127,5 @@ dist
 .pnp.*
 
 backend/__pycache__/*
+~$ojectReport.docx
+~WRL3805.tmp
