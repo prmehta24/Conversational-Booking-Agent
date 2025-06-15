@@ -1,6 +1,9 @@
 # Conversational-Booking-Agent
  a three-party booking system involving a Human user, an AI Assistant, and a Browser Agent. 
 
+## Notes
+* The browser automation can fail several times with the same inputs before succeeding. If the response from the booking agent is 'Please try again', it is a booking automation failure, not invalid inputs given to the agent. So, request the agent to try again multiple times until it succeeds.
+
 ## Progress
 * 30 min complete:
     * Updated Node/npm.
@@ -60,6 +63,8 @@
     * Modified code to work for any calendly booking url.
     * Cleaned up unnecessary imports, added comments, and debugged error related to selecting wrong time during booking using playwright. I was using an ambiguous element selector.
     * Reread the assignment document to figure out what is left to do.
+* 9.5 hours complete:
+    * Created list of tasks left to do and began writing the project report.
 
 # Instructions to Run
 * To active virtual env with git bash: 'source .venv/Scripts/activate'
