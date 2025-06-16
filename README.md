@@ -1,8 +1,38 @@
 # Conversational-Booking-Agent
  a three-party booking system involving a Human user, an AI Assistant, and a Browser Agent. 
 
+## Instructions to Run
+* Prerequisites
+    * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+    * [Node](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+    * [Python](https://www.python.org/downloads/)
+    * [Gemini API Key](https://ai.google.dev/gemini-api/docs/quickstart)
+* Install frontend dependencies.
+    * Go to frontend/my-app
+    * Run `npm install`
+* Install backend dependencies.
+    * Go to the backend folder.
+    * Create a [Python venv](https://docs.python.org/3/library/venv.html).
+    * [Activate the venv](https://docs.python.org/3/library/venv.html#how-venvs-work).
+    * `pip install -r requirements.txt`
+* To run frontend:
+    * `cd frontend/my-app`
+    * `npm start`
+* Create a .env file in the backend folder and save two lines:
+    * GEMINI_API_KEY=api_key_value_here
+    * CALENDLY_BOOKING_URL=https://calendly.com/your_booking_url
+* To run backend:
+    * Go to backend folder. 
+    * [Activate the venv](https://docs.python.org/3/library/venv.html#how-venvs-work). To activate virtual env with git bash: `source .venv/Scripts/activate` (replace .venv by the name of the virtual environment folder you created  ) 
+    * Set `PYTHONIOENCODING=utf-8` environment variable in case of UnicodeEncodeError when starting backend server. Refer reference link 3.
+    * `fastapi run main.py`
+* Once both backend and frontend are running, 
+    * you can access the Chat UI at `http://localhost:3000/`. 
+    * The backend docs are available at `http://localhost:8000/docs`
+
 ## Notes
 * The browser automation can fail several times with the same inputs before succeeding. If the response from the booking agent is 'Please try again', it is a booking automation failure, not invalid inputs given to the agent. So, request the agent to try again multiple times until it succeeds.
+* More information regarding this project can be found in the ProjectReport.docx
 
 ## Progress
 * 30 min complete:
@@ -75,34 +105,26 @@
     * Updated Project Report - Added my approach on how I would handle bonus objectives, adding what I accomplished and learned from the assessment, future work, etc.
 * 11.5 hours complete:
     * Updated Project Report - Added what I accomplished and learned from the assessment, future work, justification for use of Playwright, etc.
+* 12.5 hours complete:
+    * Updated README to have complete instructions on how to setup and run the project.
+    * Completed the Project Report.
+    * Added a requirements.txt to install python dependencies.
 
-# Instructions to Run
-
-* To run frontend:
-    * "cd my-app"
-    * "npm start"
-* Create a .env file in the backend folder and save two lines:
-    * GEMINI_API_KEY=api_key_value_here
-    * CALENDLY_BOOKING_URL=https://calendly.com/your_booking_url
-* To run backend:
-    * To active virtual env with git bash: 'source .venv/Scripts/activate'  
-    * Set 'PYTHONIOENCODING=utf-8' environment variable in case of UnicodeEncodeError when starting backend server. Refer link 3.
-    * "fastapi run main.py"
-
-## Tools used
+## Tools Used
 * Github Copilot
 * Visual Studio Code
 
 ## References
-* https://medium.com/free-code-camp/how-to-build-a-react-js-chat-app-in-10-minutes-c9233794642b
-* https://fastapi.tiangolo.com/
-* https://stackoverflow.com/questions/79199890/fastapi-dev-fails-with-unicodeencodeerror
-* https://fastapi.tiangolo.com/tutorial/cors/#use-corsmiddleware
-* https://stackoverflow.com/questions/72253011/is-it-possible-to-initialize-the-state-of-a-component-with-api-data-before-the-i
-* https://ai.google.dev/gemini-api/docs/quickstart
-* https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1
-* https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files
-* https://ai.google.dev/gemini-api/docs/function-calling?example=meeting
-* https://playwright.dev/python/docs/api/class-selectors#selectors-set-test-id-attribute
-* https://stackoverflow.com/questions/75151754/how-can-i-select-an-element-by-id
-* https://stackoverflow.com/questions/79109458/playwright-python-how-can-i-catch-exception-and-just-gracefully-quit
+1. https://medium.com/free-code-camp/how-to-build-a-react-js-chat-app-in-10-minutes-c9233794642b
+2. https://fastapi.tiangolo.com/
+3. https://stackoverflow.com/questions/79199890/fastapi-dev-fails-with-unicodeencodeerror
+4. https://fastapi.tiangolo.com/tutorial/cors/#use-corsmiddleware
+5. https://stackoverflow.com/questions/72253011/is-it-possible-to-initialize-the-state-of-a-component-with-api-data-before-the-i
+6. https://ai.google.dev/gemini-api/docs/quickstart
+7. https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1
+8. https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files
+9. https://ai.google.dev/gemini-api/docs/function-calling?example=meeting
+10. https://playwright.dev/python/docs/api/class-selectors#selectors-set-test-id-attribute
+11. https://stackoverflow.com/questions/75151754/how-can-i-select-an-element-by-id
+12. https://stackoverflow.com/questions/79109458/playwright-python-how-can-i-catch-exception-and-just-gracefully-quit
+13. https://www.markdownguide.org/basic-syntax/
