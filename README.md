@@ -113,6 +113,9 @@ To book a meeting on Calendly by chatting with an AI assistant powered by Gemini
 * 13 hours complete:
     * Updated Project Report and created a pdf.
     * Added informative comments and TODO comments to the project.
+* 15 hours complete:
+    * Updated Project Report with more planned future work.
+    * Created a Loom video walking through the project objective, architecture, README, write-up, and did a project demo.
 
 ## Tools Used
 * Github Copilot
