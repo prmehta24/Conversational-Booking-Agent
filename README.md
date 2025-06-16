@@ -32,7 +32,7 @@
 
 ## Notes
 * The browser automation can fail several times with the same inputs before succeeding. If the response from the booking agent is 'Please try again', it is a booking automation failure, not invalid inputs given to the agent. So, request the agent to try again multiple times until it succeeds.
-* More information regarding this project can be found in the ProjectReport.docx
+* More information regarding this project can be found in the ProjectReport.pdf
 
 ## Progress
 * 30 min complete:
@@ -109,6 +109,9 @@
     * Updated README to have complete instructions on how to setup and run the project.
     * Completed the Project Report.
     * Added a requirements.txt to install python dependencies.
+* 13 hours complete:
+    * Updated Project Report and created a pdf.
+    * Added informative comments and TODO comments to the project.
 
 ## Tools Used
 * Github Copilot

@@ -37,7 +37,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY)
 tools = types.Tool(function_declarations=[schedule_meeting_function])
 
-chat = client.chats.create(model="gemini-2.0-flash", 
+chat = client.chats.create(model="gemini-2.0-flash",  #TODO: Experiment with other models.
     config=types.GenerateContentConfig(
         tools=[tools],
         system_instruction="The AI Assistant should engage the Human user in a dialogue" \
@@ -52,11 +52,8 @@ def get_ai_response(user_message):
         function_call = response.candidates[0].content.parts[0].function_call
         print(f"Function to call: {function_call.name}")
         print(f"Arguments: {function_call.args}")
-        #  In a real app, you would call your function here:
-        #print(function_call.args['email'])
-        result = book_meeting(**function_call.args)
-        return result
-        #return "Called the schedule_meeting function with arguments: " + str(function_call.args)
+        result = book_meeting(**function_call.args) 
+        return result #TODO: Send the result value back to the AI and return the AI's response.
     else:
         print(f"AI Response Message: {response.text}")
         return response.text

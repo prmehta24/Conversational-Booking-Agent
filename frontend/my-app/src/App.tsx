@@ -35,7 +35,7 @@ function App() {
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
-      const data = await response.json();
+      const data = await response.json(); //TODO: handle failure case better.
       console.log('Response Data from backend after addMessage POST Request: ', data);
       setMessages(data.messageList);
   } catch (error) {

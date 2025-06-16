@@ -8,12 +8,12 @@ origins = [
     "http://localhost:3000",
 ]
 
-sys.stdin.reconfigure(encoding='utf-8')
+sys.stdin.reconfigure(encoding='utf-8') #TODO: Check if this is needed.
 sys.stdout.reconfigure(encoding='utf-8')
 
 app = FastAPI()
 
-app.add_middleware(
+app.add_middleware( #TODO: understand how the various parameters work.
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
@@ -38,14 +38,14 @@ else:
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": "World"} #TODO: Change this to a more meaningful message.
 
 @app.get("/messageList")
 def read_message_list():
     return messageList
 
 @app.post("/addMessage")
-def add_message(message: Message):
+def add_message(message: Message): #TODO: Am I handling all possible errors here?
     messageList.append(message)
     ai_response = get_ai_response(message.text)
     if ai_response:
