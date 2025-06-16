@@ -15,9 +15,6 @@
     * Create a [Python venv](https://docs.python.org/3/library/venv.html).
     * [Activate the venv](https://docs.python.org/3/library/venv.html#how-venvs-work).
     * `pip install -r requirements.txt`
-* To run frontend:
-    * `cd frontend/my-app`
-    * `npm start`
 * Create a .env file in the backend folder and save two lines:
     * GEMINI_API_KEY=api_key_value_here
     * CALENDLY_BOOKING_URL=https://calendly.com/your_booking_url
@@ -26,6 +23,9 @@
     * [Activate the venv](https://docs.python.org/3/library/venv.html#how-venvs-work). To activate virtual env with git bash: `source .venv/Scripts/activate` (replace .venv by the name of the virtual environment folder you created  ) 
     * Set `PYTHONIOENCODING=utf-8` environment variable in case of UnicodeEncodeError when starting backend server. Refer reference link 3.
     * `fastapi run main.py`
+* To run frontend:
+    * `cd frontend/my-app`
+    * `npm start`
 * Once both backend and frontend are running, 
     * you can access the Chat UI at `http://localhost:3000/`. 
     * The backend docs are available at `http://localhost:8000/docs`
