@@ -1,5 +1,6 @@
 # Conversational-Booking-Agent
- a three-party booking system involving a Human user, an AI Assistant, and a Browser Agent. 
+
+To book a meeting on Calendly by chatting with an AI assistant powered by Gemini. Chat UI built with React.js and TypeScript. 
 
 ## Instructions to Run
 * Prerequisites
