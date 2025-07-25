@@ -35,6 +35,7 @@ To book a meeting on Calendly by chatting with an AI assistant powered by Gemini
 * The browser automation can fail several times with the same inputs before succeeding. If the response from the booking agent is 'Please try again', it is a booking automation failure, not invalid inputs given to the agent. So, request the agent to try again multiple times until it succeeds.
 * More information regarding this project can be found in the ProjectReport.pdf
 * A video walkthrough of the project can be found [here](https://www.loom.com/share/6875153af4bd429bb5f920181e0409f8?sid=3752eb88-4d9f-44d0-8426-c4f3cdde87ef).
+* The frontend is made roughly to complete the project within the time constraints.
 
 ## Progress
 * 30 min complete:
